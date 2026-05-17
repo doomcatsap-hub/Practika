@@ -1,0 +1,1 @@
+﻿create Table t1(id int)
