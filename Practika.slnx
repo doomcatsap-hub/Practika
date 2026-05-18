@@ -1,7 +1,7 @@
 <Solution>
   <Project Path="Collection/Collection.csproj" Id="4e8edccc-c7f6-4ddc-b9a2-e8029fa28458" />
+  <Project Path="DataBase/DataBase.csproj" Id="181259af-d5fb-4501-bb69-33b5a6d3c224" />
   <Project Path="DataTypes1/DataTypes1.csproj" />
   <Project Path="DataTypes2/DataTypes2.csproj" Id="ef6b021b-2c03-4eb7-8ccd-bfd84f897b3d" />
-  <Project Path="Delegates/Delegates.csproj" Id="42bb80ca-daf0-4a1c-9db9-8e5dff8f6283" />
   <Project Path="OOP1/OOP1.csproj" Id="43c01ab9-468e-4550-a056-d937373e5911" />
 </Solution>

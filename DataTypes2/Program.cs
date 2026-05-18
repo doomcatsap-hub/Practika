@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите длину диагоналей");
+            Console.WriteLine("Введите длину диагоналей (нечетное положительное число)");
             int N = Convert.ToInt32(Console.ReadLine());
             Rhomb(N);
         }
@@ -17,7 +17,7 @@
             {
                 for (int j = 0; j < N; j++)
                 {
-                    if (j == Math.Abs(mid - i) || j == mid + i || j == N-1 - i + mid)
+                    if (j == (Math.Abs(mid - i)) || (j == mid + i) || (j == N-1 - i + mid))
                         Console.Write('X');
                     else Console.Write(' ');
                 }
