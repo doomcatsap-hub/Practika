@@ -12,6 +12,8 @@ namespace Collection
             var stack2 = new SmartStack<int>();
             stack2.Push(1);
             stack2.Push(2);
+            Console.WriteLine($"Первый элемент стека {stack2.Peek()}");
+            stack2.Pop();
             stack2.PushRange(new int[] { 11,22,33 });
             stack2.PushRange(stack2);
             stack1 +=  stack2;
@@ -125,7 +127,8 @@ namespace Collection
                 array[_count - 1 - index] = value;
             }
         }
-        public static SmartStack<T> operator +(SmartStack<T> stack1, SmartStack<T> stack2) //Складывание стеков
+        // Для возможности суммирования стеков
+        public static SmartStack<T> operator +(SmartStack<T> stack1, SmartStack<T> stack2) 
         {
             stack1.PushRange(stack2);
             return stack1;
