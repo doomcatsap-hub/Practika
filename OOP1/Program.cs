@@ -36,12 +36,10 @@ namespace OOP1
         public double Perimeter
         {
             get { return (Hight + Width) * 2; }
-             private set { }
         }
         public double Square
         {
             get { return Hight * Width; }
-            private set { }
         }
         public void ShowPerimeterSquare()
         {

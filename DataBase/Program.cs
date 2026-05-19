@@ -1,6 +1,7 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
+using System;
 using System.Security.Cryptography.X509Certificates;
-using Microsoft.Data.SqlClient;
 namespace DataBase
 {
     class Program
@@ -8,7 +9,13 @@ namespace DataBase
         static void Main(string[] args)
         {
 
-            string connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=PractikaBD;Integrated Security=True;TrustServerCertificate=True;";
+            var configuration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .Build();
+            string connectionString = configuration.GetConnectionString("DefaultConnection");
+
+
             PlayerCRUD q1 = new(connectionString);
             q1.Update();
             q1.Select();
