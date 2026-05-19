@@ -12,15 +12,16 @@ namespace Collection
             var stack2 = new SmartStack<int>();
             stack2.Push(1);
             stack2.Push(2);
-            Console.WriteLine($"Первый элемент стека {stack2.Peek()}");
+            Console.WriteLine($"Первый элемент стека: {stack2.Peek()}");
             stack2.Pop();
             stack2.PushRange(new int[] { 11,22,33 });
             stack2.PushRange(stack2);
             stack1 +=  stack2;
+            Console.WriteLine("Вывод всех элементов стека:");
             foreach (int i in stack1)
                 Console.WriteLine(i);
             Random rand = new Random();
-            Console.WriteLine("Случайный элемент стека " + stack1[rand.Next(stack1.Count)]);
+            Console.WriteLine("Случайный элемент стека: " + stack1[rand.Next(stack1.Count)]);
 
         }
     }
